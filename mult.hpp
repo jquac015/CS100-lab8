@@ -18,6 +18,10 @@ public:
     }
     virtual Base* get_left(){ return val1; }
     virtual Base* get_right(){ return val2; }
+    virtual void accept(CountVisitor* visit){
+        visit->visit_mult();
+        visit->mult_count();
+    }
 };
 
 #endif

@@ -20,6 +20,7 @@ void PreorderIterator::next() {
     // The notes say to create an iterator for the item on the top of the stack, but the stack is
     // an iterator so it should probably say create an item for the current of the iterator on the
     // top of the stack
+
     Iterator* top_itr = this->iterators.top()->current()->create_iterator();
     top_itr->first();
     this->iterators.push(top_itr);

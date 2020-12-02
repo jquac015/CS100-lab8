@@ -24,6 +24,10 @@ public:
     }
     virtual Base* get_left(){ return nullptr; }
     virtual Base* get_right(){ return nullptr; }
+    virtual void accept(CountVisitor* visit){
+        visit->visit_op();
+        visit->op_count();
+    }
 };
 
 #endif

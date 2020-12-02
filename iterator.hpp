@@ -107,7 +107,6 @@ class PreorderIterator : public Iterator {
         }
 
         void next(){
-            Iterator* dummy =
         }
 
         bool is_done(){
