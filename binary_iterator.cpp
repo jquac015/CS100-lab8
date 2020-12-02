@@ -8,13 +8,11 @@ void BinaryIterator::first() {
     this->c = left;
 }
 void BinaryIterator::next() {
-    if(this->c == left) {
+    if (this->c == left) {
         this->c = right;
-    }
-    else if(this->c == right) {
+    } else if (this->c == right) {
         this->c = end;
-    } 
-    else {
+    } else {
         this->c = end;
     }
 }
@@ -27,8 +25,7 @@ bool BinaryIterator::is_done() {
 Base* BinaryIterator::current() {
     if(this->c == left) {
         return this->self_ptr->get_left();
-    }
-    else if(this->c == right) {
+    } else if(this->c == right) {
         return this->self_ptr->get_right();
     }
     return nullptr;
