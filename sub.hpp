@@ -9,9 +9,9 @@ class Sub : public Base {
 public:
     Base* val1;
     Base* val2;
-    Sub(Base* first, Base* second) : Base() { a = first; b = second;}
-    virtual double evaluate() {return (a->evaluate() - b->evaluate());}
-    virtual std::string stringify() {return a->stringify() + "-" + b->stringify(); }
+    Sub(Base* first, Base* second) : Base() { val1 = first; val2 = second;}
+    virtual double evaluate() {return (val1->evaluate() - val2->evaluate());}
+    virtual std::string stringify() {return val1->stringify() + "-" + val2->stringify(); }
     virtual Iterator* create_iterator(){
         Iterator* it = new BinaryIterator(this);
         return it;

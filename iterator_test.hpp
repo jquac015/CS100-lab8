@@ -3,10 +3,12 @@
 
 #include "gtest/gtest.h"
 #include "base.hpp"
-#include "op.hpp"
 #include "add.hpp"
+#include "div.hpp"
+#include "mult.hpp"
 #include "pow.hpp"
-
+#include "rand.hpp"
+#include "sub.hpp"
 
 TEST(IteratorTest, EvaluateAdd){
 
