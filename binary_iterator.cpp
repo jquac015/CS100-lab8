@@ -1,4 +1,3 @@
-
 #include "iterator.hpp"
 
 BinaryIterator::BinaryIterator(Base* ptr) : Iterator(ptr) {
