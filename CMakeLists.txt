@@ -6,7 +6,7 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(lab
         main.cpp
-        )
+        countVisitor.hpp)
 
 ADD_EXECUTABLE(test
         unit_test.cpp
