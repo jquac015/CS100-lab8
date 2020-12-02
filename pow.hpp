@@ -45,7 +45,6 @@ public:
     virtual Base* get_right(){ return power; }
     virtual void accept(CountVisitor* visit){
         visit->visit_pow();
-        visit->pow_count();
     }
 };
 
