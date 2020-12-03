@@ -63,5 +63,5 @@ void CountVisitor::visit_pow(){
 }
 
 int CountVisitor::pow_count(){
-    return sub;
+    return pow;
 }

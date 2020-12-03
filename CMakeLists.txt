@@ -10,6 +10,8 @@ ADD_EXECUTABLE(lab
 
 ADD_EXECUTABLE(test
         unit_test.cpp
+        binary_iterator.cpp
+        preorder_iterator.cpp
         )
 
 TARGET_LINK_LIBRARIES(test gtest)
