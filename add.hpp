@@ -4,6 +4,7 @@
 #include "base.hpp"
 #include "iterator.hpp"
 #include "visitor.hpp"
+#include "binary_iterator.cpp"
 
 class Add : public Base {
 public:
