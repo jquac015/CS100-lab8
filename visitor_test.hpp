@@ -2,6 +2,8 @@
 #define __VISITOR_TEST_HPP__
 
 #include "visitor.cpp"
+#include "iterator.hpp"
+#include "preorder_iterator.cpp"
 #include "gtest/gtest.h"
 #include "base.hpp"
 #include "op.hpp"
@@ -24,7 +26,7 @@ TEST(CountVisitorTest, SubDiv) {
     Add* dummy = new Add(ab, cd);
 
     CountVisitor *cv = new CountVisitor();
-    PreorderIterator* it = new PreorderIterator(dummy);
+    Iterator* it = new PreorderIterator(dummy);
     it->first();
     while(!it->is_done()){
         it->current()->accept(cv);
@@ -58,7 +60,7 @@ TEST(CountVisitorTest, AddMultSubDivPow) {
 
     Add* dummy = new Add(ab_cd, ef_gh);
     CountVisitor* cv = new CountVisitor();
-    PreorderIterator* it = new PreorderIterator(dummy);
+    Iterator* it = new PreorderIterator(dummy);
     it->first();
     while (!it->is_done()) {
         it->current()->accept(cv);
@@ -99,9 +101,9 @@ TEST(CountVisitorTest, AddMultSubDivPow2) {
     Sub* dummy2 = new Sub(ab_cd, i);
 
     CountVisitor* cv1 = new CountVisitor();
-    PreorderIterator* it1 = new PreorderIterator(dummy);
+    Iterator* it1 = new PreorderIterator(dummy);
     CountVisitor* cv2 = new CountVisitor();
-    PreorderIterator* it2 = new PreorderIterator(dummy2);
+    Iterator* it2 = new PreorderIterator(dummy2);
     it1->first();
     it2->first();
     while (!it1->is_done()) {

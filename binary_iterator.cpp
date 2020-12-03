@@ -1,5 +1,7 @@
 #include "iterator.hpp"
 
+#include <iostream>
+
 BinaryIterator::BinaryIterator(Base* ptr) : Iterator(ptr) {
     this->c = left;
 }
